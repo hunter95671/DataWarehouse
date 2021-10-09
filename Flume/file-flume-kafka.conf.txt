@@ -22,3 +22,4 @@ a1.channels.c1.parseAsFlumeEvent = false
 
 #拼接组件
 a1.sources.r1.channels = c1
+
