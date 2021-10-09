@@ -26,7 +26,7 @@ public class ETLInterceptor implements Interceptor {
         String log = new String(body, StandardCharsets.UTF_8);
 
         //2.校验
-        if(JSONUtil.isValidate(log)){
+        if (JSONUtil.isValidate(log)) {
             return event;
         }
         return null;
@@ -36,9 +36,9 @@ public class ETLInterceptor implements Interceptor {
     public List<Event> intercept(List<Event> list) {
 
         Iterator<Event> iterator = list.iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             Event next = iterator.next();
-            if(intercept(next)==null){
+            if (intercept(next) == null) {
                 iterator.remove();
             }
         }
@@ -49,7 +49,7 @@ public class ETLInterceptor implements Interceptor {
     public void close() {
     }
 
-    public static class Builder implements Interceptor.Builder{
+    public static class Builder implements Interceptor.Builder {
 
         @Override
         public Interceptor build() {
