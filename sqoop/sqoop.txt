@@ -1,0 +1,23 @@
+bin/sqoop import \
+--connect jdbc:mysql://hadoop102:3306/gmall \
+--username root \
+--password oooppp \
+--table user_info \
+--columns id,login_name \
+--where 'id>=1 and id<=20' \
+--target-dir /user_info \
+--delete-target-dir \
+--fields-terminated-by '\t' \
+--num-mappers 2 \
+--split-by id
+
+bin/sqoop import \
+--connect jdbc:mysql://hadoop102:3306/gmall \
+--username root \
+--password oooppp \
+--query 'select id,login_name from user_info where id>=1 and id<=20 and $CONDITIONS' \
+--target-dir /user_info \
+--delete-target-dir \
+--fields-terminated-by '\t' \
+--num-mappers 2 \
+--split-by id
