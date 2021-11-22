@@ -6983,12 +6983,24 @@ left join
 )t5
 on t4.activity_id=t5.activity_id;
 
-
-
-
-
-
-
-
-
-
+create view dim_sku_info_view
+as
+select
+    id,
+    price,
+    sku_name,
+    sku_desc,
+    weight,
+    is_sale,
+    spu_id,
+    spu_name,
+    category3_id,
+    category3_name,
+    category2_id,
+    category2_name,
+    category1_id,
+    category1_name,
+    tm_id,
+    tm_name,
+    create_time
+from dim_sku_info;
