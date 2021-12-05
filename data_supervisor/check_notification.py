@@ -96,8 +96,8 @@ def mail_alert(line):
 
     # smtp协议发送邮件的必要设置
     mail_host = "smtp.qq.com"
-    mail_user = "2023851094@qq.com"
-    mail_pass = "ffeyrdvmhvpmcjff"
+    mail_user = "1095672468@qq.com"
+    mail_pass = "pjfrmmqiirugbacg"
 
     # 告警内容
     message = ["".join(["表格", str(line["tbl"]), "数据异常."]),
