@@ -66,7 +66,7 @@ def one_alert(line):
     """
 
     # 集成睿象云需要使用的rest接口，和APP KEY，须在睿象云平台获取
-    one_alert_key = "c2030c9a-7896-426f-bd64-59a8889ac8e3"
+    one_alert_key = "f9816b80319e4c7aa9b7ef8835a8161c"
     one_alert_host = "http://api.aiops.com/alert/api/event"
 
     # 根据睿象云的rest api要求，传入必要的参数
