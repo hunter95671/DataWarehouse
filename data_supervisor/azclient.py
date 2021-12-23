@@ -10,7 +10,7 @@ az_url = "http://hadoop102:8081/"
 # Azkaban用户名
 az_username = "hunter95"
 # Azkaban密码
-az_password = "atguigu"
+az_password = "oooppp"
 # 工程名称
 project = "gmall"
 # flow名称

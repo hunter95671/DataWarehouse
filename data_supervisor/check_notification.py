@@ -31,7 +31,7 @@ def read_table(table, dt):
 
     # mysql必要参数设置，需根据实际情况作出修改
     mysql_user = "root"
-    mysql_password = "000000"
+    mysql_password = "oooppp"
     mysql_host = "hadoop102"
     mysql_schema = "data_supervisor"
 

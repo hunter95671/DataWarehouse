@@ -54,13 +54,13 @@ HIVE_ENGINE=hive
 
 # MySQL相关配置
 mysql_user="root"
-mysql_passwd="000000"
+mysql_passwd="oooppp"
 mysql_host="hadoop102"
 mysql_DB="data_supervisor"
 mysql_tbl="rng"
 
 # 认证为hive用户，如在非安全(Hadoop未启用Kerberos认证)环境中，则无需认证
-kinit -kt /etc/security/keytab/hive.keytab hive
+#kinit -kt /etc/security/keytab/hive.keytab hive
 
 # 查询不在规定值域的值的个数
 RESULT=$($HIVE_ENGINE -e "set hive.cli.print.header=false;select count(1) from $HIVE_DB.$TABLE where dt='$DT' and $COL not between $RANGE_MIN and $RANGE_MAX;")
